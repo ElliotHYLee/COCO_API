@@ -1,13 +1,19 @@
-from pycocotools.coco import COCO
-import numpy as np
-import skimage.io as io
-import matplotlib.pyplot as plt
-import pylab
-
+import cv2
+from util import Tools
 
 def main():
-    pass
+    t = Tools()
+    imgIds = t.coco.getImgIds()
+
+    N = len(imgIds)
+    for i in range(0, 10):
+        I = t.drawBBox(i)
+        cv2.imshow("asdf", I)
+        cv2.waitKey(1000)
 
 
-if __name__ == '__main__':
+
+
+if __name__ == '__main__'\
+        :
     main()
